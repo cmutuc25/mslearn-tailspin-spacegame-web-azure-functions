@@ -25,6 +25,12 @@ stages:
       inputs:
         version: '$(dotnetSdkVersion)'
 
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '2.x'
+        addToPath: true
+        architecture: 'x64'
+        
     - task: Npm@1
       displayName: 'Run npm install'
       inputs:
